@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 3001;
+const PORT = 80;
 
 const fs = require("fs");
 const path = require("path");
@@ -11,7 +11,7 @@ const getResources = () => JSON.parse(fs.readFileSync(pathToFile))
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World")
+  res.send("Hello World Api")
 })
 
 app.get("/api/resources/:id", (req, res) => {
